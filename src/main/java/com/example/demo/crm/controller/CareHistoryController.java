@@ -1,4 +1,4 @@
-package com.example.demo.crm.controller;
+﻿package com.example.demo.crm.controller;
 
 import com.example.demo.crm.dto.CareHistoryRequest;
 import com.example.demo.crm.dto.CareHistoryResponse;
@@ -10,7 +10,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -36,3 +36,4 @@ public class CareHistoryController {
         return careHistoryService.getCareHistory(customerId);
     }
 }
+

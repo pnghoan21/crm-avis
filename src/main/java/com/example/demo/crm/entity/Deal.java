@@ -1,19 +1,19 @@
 ﻿package com.example.demo.crm.entity;
 
-import com.example.demo.crm.enums.CareType;
+import com.example.demo.crm.enums.DealStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import jakarta.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
-@Table(name = "customer_care_history")
+@Table(name = "deals")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CustomerCareHistory {
+public class Deal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,26 +22,24 @@ public class CustomerCareHistory {
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
+    private String customerNeed;
+    
+    private Double contractValue;
+    
+    private String serviceCategory;
+    
+    private LocalDate implementationDeadline;
+
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private CareType type;
-
-    @Column(columnDefinition = "TEXT")
-    private String content;
+    private DealStatus status;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "created_by_id")
-    private User createdBy;
-
-    private LocalDateTime createdAt;
+    @JoinColumn(name = "lost_reason_id")
+    private LostReason lostReason;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "related_activity_id")
-    private Activity relatedActivity;
-
-    @PrePersist
-    protected void onCreate() {
-        createdAt = LocalDateTime.now();
-    }
+    @JoinColumn(name = "assigned_employee_id")
+    private User assignedEmployee;
 }
 

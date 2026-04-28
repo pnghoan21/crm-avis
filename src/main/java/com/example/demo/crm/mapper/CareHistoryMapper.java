@@ -12,6 +12,7 @@ public interface CareHistoryMapper {
     @Mapping(target = "customer", ignore = true)
     @Mapping(target = "createdBy", ignore = true)
     @Mapping(target = "createdAt", ignore = true)
+    @Mapping(target = "relatedActivity", ignore = true)
     CustomerCareHistory toEntity(CareHistoryRequest request);
 
     @Mapping(target = "createdByUsername", source = "createdBy.username")

@@ -1,11 +1,11 @@
-package com.example.demo.crm.entity;
+﻿package com.example.demo.crm.entity;
 
 import com.example.demo.crm.enums.Role;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "users")
@@ -29,3 +29,4 @@ public class User {
 
     private String status;
 }
+
