@@ -1,9 +1,9 @@
-package com.example.demo.crm.dto;
+﻿package com.example.demo.crm.dto;
 
 import com.example.demo.crm.enums.ComplaintStatus;
 import lombok.Data;
 
-import javax.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotBlank;
 
 @Data
 public class ComplaintRequest {
@@ -12,3 +12,4 @@ public class ComplaintRequest {
     private String description;
     private ComplaintStatus status;
 }
+

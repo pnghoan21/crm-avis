@@ -1,4 +1,4 @@
-package com.example.demo.crm.entity;
+﻿package com.example.demo.crm.entity;
 
 import com.example.demo.crm.enums.CustomerStatus;
 import com.example.demo.crm.enums.CustomerType;
@@ -6,7 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "customers", indexes = {
@@ -43,4 +43,8 @@ public class Customer {
 
     @Enumerated(EnumType.STRING)
     private CustomerStatus status;
+
+    @Enumerated(EnumType.STRING)
+    private com.example.demo.crm.enums.CustomerPriority priority;
 }
+

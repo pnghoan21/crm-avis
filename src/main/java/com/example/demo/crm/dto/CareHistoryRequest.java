@@ -1,9 +1,9 @@
-package com.example.demo.crm.dto;
+﻿package com.example.demo.crm.dto;
 
 import com.example.demo.crm.enums.CareType;
 import lombok.Data;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 @Data
 public class CareHistoryRequest {
@@ -11,3 +11,4 @@ public class CareHistoryRequest {
     private CareType type;
     private String content;
 }
+

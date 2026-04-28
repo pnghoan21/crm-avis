@@ -1,11 +1,11 @@
-package com.example.demo.crm.entity;
+﻿package com.example.demo.crm.entity;
 
 import com.example.demo.crm.enums.ComplaintStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
@@ -39,3 +39,4 @@ public class CustomerComplaint {
         createdAt = LocalDateTime.now();
     }
 }
+

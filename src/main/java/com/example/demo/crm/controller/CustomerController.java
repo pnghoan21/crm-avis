@@ -1,4 +1,4 @@
-package com.example.demo.crm.controller;
+﻿package com.example.demo.crm.controller;
 
 import com.example.demo.crm.dto.CustomerDetailResponse;
 import com.example.demo.crm.dto.CustomerRequest;
@@ -14,7 +14,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1/customers")
@@ -69,3 +69,4 @@ public class CustomerController {
         customerService.assignSales(id, sales);
     }
 }
+
