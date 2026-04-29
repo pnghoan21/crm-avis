@@ -1,4 +1,4 @@
-﻿package com.example.demo.crm.dto;
+package com.example.demo.crm.dto;
 
 import com.example.demo.crm.enums.CareType;
 import lombok.AllArgsConstructor;
@@ -13,18 +13,17 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class ActivityRequestDTO {
 
-    @NotNull(message = "KhÃ¡ch hÃ ng khÃ´ng Ä‘Æ°á»£c Ä‘á»ƒ trá»‘ng")
+    @NotNull(message = "Khách hàng không được để trống")
     private Long customerId;
 
-    @NotNull(message = "NhÃ¢n viÃªn phá»¥ trÃ¡ch khÃ´ng Ä‘Æ°á»£c Ä‘á»ƒ trá»‘ng")
+    @NotNull(message = "Nhân viên phụ trách không được để trống")
     private Long assignedEmployeeId;
 
-    @NotNull(message = "Thá»i háº¡n khÃ´ng Ä‘Æ°á»£c Ä‘á»ƒ trá»‘ng")
+    @NotNull(message = "Thời hạn không được để trống")
     private LocalDateTime dueDate;
 
-    @NotNull(message = "Loáº¡i hoáº¡t Ä‘á»™ng khÃ´ng Ä‘Æ°á»£c Ä‘á»ƒ trá»‘ng")
+    @NotNull(message = "Loại hoạt động không được để trống")
     private CareType type;
 
     private String description;
 }
-
