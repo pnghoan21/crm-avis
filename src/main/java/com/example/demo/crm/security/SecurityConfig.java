@@ -42,6 +42,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/auth/**").permitAll()
                         // H2 console
                         .requestMatchers("/h2-console/**").permitAll()
+                        .requestMatchers("/api/v1/users/**").permitAll()
                         // Tất cả API còn lại cần đăng nhập
                         .anyRequest().authenticated())
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
